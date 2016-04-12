@@ -1,0 +1,128 @@
+// base.scss
+
+            /************************ GLOBAL ************************/
+
+* {
+box-sizing: border-box;
+}
+
+body {
+    @extend %body;
+    @include linksColors-lvhaf($mine-shaft, $dove, $curius-blue, $kim, $mine-shaft); 
+}
+
+img {
+    @extend %img-size;
+}
+
+h1,
+h2,
+h3 {
+    @extend %heading;
+}
+
+
+ul,
+ol {
+   @extend %lists; 
+}
+
+         /************************ HOME PAGE ************************/
+
+
+
+.studentDescript,
+.mainContact {
+    text-align: center;
+    padding: 20px;
+    border-radius: $br * 2;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    font-weight: 700;
+    @include transition(all .6s ease);
+    &:hover {
+        background-color: $white-smoke;
+        color: $mine-shaft;
+    }
+}
+
+
+#mainWrapper {
+    background-color: $white-smoke;
+    padding: 15px 25px;
+    @media #{$brk-wide} {
+        max-width: 1024px;
+        margin: auto;   
+    }
+}
+
+#portfolio {
+    @extend %text-format;
+    padding: 20px 0 20px;
+    @media #{$brk-narrow} {
+            font-size: 1.4em;
+    }
+}
+
+#contact {
+    @extend %text-format;
+    @media #{$brk-narrow} {
+            font-size: 1.4em;
+    }
+}
+
+.mainContact {
+    @extend %position;
+    padding: 65px 20px;
+    @media #{$brk-narrow} {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-flow: nowrap column;
+            -ms-flex-flow: nowrap column;
+            flex-flow: nowrap column;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            line-height: 2;
+            max-width: 1280px;
+            @include pad-mar(0 50px, auto);
+            height: 100vh;
+            border-radius: 0;
+                p {
+                    font-size: 1.2em;
+            }  
+    }
+        @media #{$brk-wide} {
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            max-width: 1024px;
+            @include pad-mar(60px 30px, auto);
+            p {
+                font-size: 1.5em;
+            }
+    }  
+}
+
+.contactLinks {
+    border-radius: $br * 2;
+        li {
+            margin: 15px;
+    }
+    @media #{$brk-narrow} {
+        font-size: 1.4em;
+        border-radius: 0;        
+    }
+    @media #{$brk-wide} {
+            @include text(1.5em, 700);
+            background-color: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,31 @@
+// variables.scss
+
+
+//Font
+$stack-verdana   : Verdana,Geneva,sans-serif;
+$stack-rale      : 'Raleway', $stack-verdana;
+$stack-mont    : 'Montserrat', $stack-verdana;
+
+
+//Color
+$white-smoke     : #f5f5f5; //backgrounds
+$mine-shaft      : #333;    //headings 
+$patina          : #669999; //blue
+$curius-blue     : #3399cc; //hover 1
+$hokey-pokey     : #CC9933; //hover 2
+$azure           : #336699; //hover 3
+$downy           : #66CCCC; //hover 4
+$kim             : #666699; //hover 5
+$dove            : #666666; //hover 6
+$rouge           : #993366; //hover 13
+
+//Border Radius
+$br              : 8px;
+
+//Media Queries
+$brk-narrow      : '(min-width: 768px)';
+$brk-wide        : '(min-width: 1024px)';
+
+
+
+

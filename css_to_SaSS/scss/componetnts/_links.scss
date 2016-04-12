@@ -1,0 +1,21 @@
+// _links.scss
+
+.contactLinks a {
+    font-family: $stack-rale; 
+}
+
+.navItems a
+ {
+    display: block;
+     @include pad-mar(12px, 0);
+}
+
+.contactLinks a {
+    padding: 12px;
+    font-weight: 700;
+}
+
+.mainItems a:hover {
+    text-decoration: none;
+    color: whitesmoke;
+}

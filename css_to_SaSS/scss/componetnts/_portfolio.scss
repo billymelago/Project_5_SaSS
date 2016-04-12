@@ -1,0 +1,106 @@
+//Portfolio 
+
+/************************ PORTFOLIO PAGE ************************/
+
+#portfolioWrapper {
+    padding: 0 15px 90px;
+    @extend %position;
+    @extend %display-flexbox;
+    @extend %flexflow-nowrap-column;
+    @extend %justify-content-center;
+    @extend %align-items-center;
+    text-align: center;
+    background: darkgrey;
+    h2 {
+        background: white;
+        color: darkslategrey;
+        @include pad-mar(15px, 10px 0 0);
+        font-weight:bold;
+        border-radius: $br;
+    }
+    @media #{$brk-narrow} {
+        padding: 0 0 90px;
+        min-width: 768px;
+        h2 {
+            width: 100%;
+            margin: 0 0 10px;
+        }
+    }
+    @media #{$brk-wide} {
+        max-width: 1290px;
+        padding: 110px 0;
+        background-color: whitesmoke;
+        h2 {
+            width: 100%;
+            margin:0;
+        }
+    }
+}
+
+.portfolioItems {
+    @media #{$brk-narrow} {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-flow: wrap row;
+        -ms-flex-flow: wrap row;
+        flex-flow: wrap row;
+        @include pad-mar(0, auto);
+        padding: 0;
+        margin: auto;
+    }
+    @media #{$brk-wide} {
+        @include pad-mar(20px, auto);
+        -webkit-flex-flow: wrap row;
+        -ms-flex-flow: wrap row;
+        flex-flow: wrap row;
+        @include pad-mar(0, auto);
+        @include text(1.10em, inherit, inherit, 1.8, 1.3px, left);
+    }
+}
+
+.portfolioChallenge {
+    background: white;
+    color: darkslategrey;
+    @include pad-mar(15px, 10px 0 0);
+    font-weight:bold;
+    border-radius: $br;
+    @media #{$brk-narrow} {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        @include pad-mar(5px, 5px);
+    }
+}
+
+.portfolioItem {
+    border-radius: $br;
+    p {
+        background: white;
+        color: darkslategrey;
+        @include pad-mar(15px, 10px 0 0);
+        font-weight:bold;
+        border-radius: $br;
+    }
+    @media #{$brk-narrow} {
+        margin: 5px;
+    }
+}
+
+.challengeContent {
+    @media #{$brk-narrow} {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-flow: wrap row;
+        -ms-flex-flow: wrap row;
+        flex-flow: wrap row;
+    }
+}

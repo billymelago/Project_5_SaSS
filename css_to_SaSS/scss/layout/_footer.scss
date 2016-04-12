@@ -1,0 +1,50 @@
+//Footer
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: whitesmoke;
+    margin: 0;
+    @extend %display-flexbox;
+    @extend %justify-content-spacebetween;
+    @extend %align-items-center;
+    border-top: solid thin darkgrey;
+    h1 {
+        @include text(smaller, 700);
+        padding: 10px;
+    }
+    a {
+        @include text(smaller, 700);
+        padding: 10px;
+    }
+    @media #{$brk-narrow} {
+        font-size: 1.3em;
+    } 
+}
+
+.footerNavMobile {
+    @media #{$brk-narrow} {
+        display: none;
+    }
+}
+
+.footerNavTablet {
+    display: none;
+    @media #{$brk-narrow} {
+        display: block;
+        text-transform: uppercase;
+    }
+}
+
+.footerNav,
+    .footerNav a {
+        @media #{$brk-narrow} {
+        display:-webkit-inline-box;
+        display:-webkit-inline-flex;
+        display:-ms-inline-flexbox;
+        display:inline-flex;
+        margin: 0 15px;
+    }
+}

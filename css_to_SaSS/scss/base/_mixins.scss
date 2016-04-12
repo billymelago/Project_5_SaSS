@@ -1,0 +1,75 @@
+//mixin
+//link https://gist.github.com/ricardozea/39e1f0fc85af04b42d41
+@mixin linksColors-lvhaf($link, $visited, $hover, $active, $focus) {
+	a { 
+        transition:.2s;
+        padding:1%;
+        margin:-1%;
+        text-decoration: none;
+		&         { 
+            color: $link; 
+        }
+		&:visited { 
+            color: $visited; 
+        }
+		&:hover   { 
+            color: $hover; 
+            text-decoration: underline; 
+        }
+		&:active  { 
+            color: $active; 
+            outline: #ccc 1px dotted; 
+        }
+		&:focus   { 
+            color: $focus; 
+        }
+	}
+}
+
+
+
+
+//Hover Items
+@mixin hoverItems($back, $text) {
+    background-color: lighten($back, 15%);
+    color: $text;
+}
+
+
+//Transition
+@mixin transition($trans...) {
+  -webkit-transition: $trans;
+  -moz-transition: $trans;
+  -ms-transition: $trans;
+  -o-transition: $trans;
+  transition: $trans;
+}
+
+
+//Fonts
+@mixin text($size: null, $weight: null, $color: null, $l-height: null, $l-space: null, $t-align: null) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    line-height: $l-height;
+    letter-spacing: $l-space;
+    text-align: $t-align;
+}
+
+
+//Padding Margin 
+@mixin pad-mar($padding, $margin) {
+    padding: $padding;
+    margin: $margin;
+}
+
+
+//Width height
+@mixin width-height($min-width: null, $width: null, $max-width: null, $min-height: null, $height: null, $max-height: null) {
+    min-width: $min-width;
+    width: $width;
+    max-width: $max-width;
+    min-height: $min-height;
+    height: $height;
+    max-height: $max-height;
+}
