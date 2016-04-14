@@ -78,6 +78,8 @@
             justify-content: center;
             margin: 0;
                 li {
+                        @include linksColors-lvhaf($mine-shaft, $dove, $curius-blue, $kim, $mine-shaft); 
+                    
                     width: auto;
                     @include pad-mar(0 12px 0, 0 0 0 10px);
                     background: none;

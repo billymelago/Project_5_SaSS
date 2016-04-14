@@ -782,7 +782,24 @@ body a {
         width: auto;
         padding: 0 12px 0;
         margin: 0 0 0 10px;
-        background: none; } }
+        background: none; }
+        .navItems li a {
+          transition: .2s;
+          padding: 1%;
+          margin: -1%;
+          text-decoration: none; }
+          .navItems li a {
+            color: #333; }
+          .navItems li a:visited {
+            color: #666666; }
+          .navItems li a:hover {
+            color: #3399cc;
+            text-decoration: underline; }
+          .navItems li a:active {
+            color: #666699;
+            outline: #ccc 0px dotted; }
+          .navItems li a:focus {
+            color: #333; } }
   @media (min-width: 1024px) {
     .navItems {
       -webkit-box-pack: end;
