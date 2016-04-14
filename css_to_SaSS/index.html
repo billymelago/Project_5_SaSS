@@ -3,18 +3,21 @@
     <head>
     
     <meta charset="utf-8">
-    <title>P2 Responsive</title>
+    <title>P5 scss:css</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/application.css">
+        <link rel="stylesheet" href="slicknav.css" />
+        <link rel="stylesheet" href="jquery/jquery-ui.min.css">
+
     <link rel="icon" 
       type="image/ico" 
       href="Images/favicon.ico">
     </head>
     
-    <body>
+    <body id="index">
         
         <header  id="mainHeader">
         
@@ -201,7 +204,7 @@
         
             <h1>Student Name &copy; 2016</h1>
             <ul class="footerNav">
-                <li class="footerNavMobile"><a href=" / ">BACK TO TOP</a></li>
+                <li class="footerNavMobile"><a href="#index">BACK TO TOP</a></li>
                 <li class="footerNavTablet"><a href="index.html" class="selectedLink">Home</a></li>
                 <li class="footerNavTablet"><a href="#portfolio">Portfolio</a></li>
                 <li class="footerNavTablet"><a href="#contact">Contact</a></li>
@@ -209,6 +212,28 @@
         
         </footer> <!-- #footer -->
 
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        
+        <script src="jquery/external/jquery/jquery.js"></script>
+        <script src="jquery/jquery-ui.min.js"></script>
+        <script src="js/jquery.slicknav.js"></script>
+        <script src="js/jquery.scrollTo.js"></script>
+        <script>
+            $(function(){
+                $('#mainNav').slicknav({
+                    	label: 'Student Name',
+                        duration: 1000,
+                        easingOpen: "easeOutBounce"
+                });
+            });</script>
+        <script>
+            $(function(){
+  $('.navItems a' || '.footerNav a').click(function(e){
+    e.preventDefault();
+    $('html,body').scrollTo(this.hash,this.hash); 
+  });
+});
+        </script>
         
     </body>
 

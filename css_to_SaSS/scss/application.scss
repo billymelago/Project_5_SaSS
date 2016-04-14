@@ -1,6 +1,8 @@
 
 // application.scss
 @import 'normalize';
+
 @import 'base/index';
+@import 'responsiveNav/slicknav';
 @import 'layout/index';
 @import 'componetnts/index';

@@ -4,18 +4,42 @@
 }
 
 #mainNav {
+		display:none;
+	}
+	
+.slicknav_menu {
+		display:block;
+        margin-bottom: 15px;
+   
+    ul {
+        margin: auto;
+        
+    }
+    @media #{$brk-narrow} {
+        display: none;
+}
+	}
+
+
+#mainNav {
+    
     @extend %display-flexbox;
     @extend %flexflow-nowrap-column;
     @extend %align-items-center;
+    @media #{$brk-narrow} {
+        display: block;
+}
     @media #{$brk-wide} {
-       position: fixed;
-        width: 100%;
+        position: fixed;
+        max-width: 1024px;
         top: 0;
         left: 0;
-        margin: 0;
-        -webkit-flex-flow: nowrap row;
-        -ms-flex-flow: nowrap row;
-        flex-flow: nowrap row;
+        right: 0;
+        margin: 0 auto;
+        padding-left: 0;
+        -webkit-flex-flow: wrap row;
+        -ms-flex-flow: wrap row;
+        flex-flow: wrap row;
         -webkit-box-pack: justify;
         -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
@@ -30,15 +54,19 @@
     @extend %flexflow-wrap-column;
     @extend %align-items-center;
     @extend %text-format;
-    width: 100%;
     margin: 0 auto 40px;
         li {
-            background-color: white;
+            
+    a {
+        color: lighten($patina, 40%);
+        font-weight: 300;
+    }
             width: 100%;
             margin: 5px 0;
             text-align: center;
             font-size: 1em;
     }
+    
         @media #{$brk-narrow} {
             font-size: 1.4em;
             -webkit-flex-flow: nowrap row;
@@ -51,7 +79,7 @@
             margin: 0;
                 li {
                     width: auto;
-                    @include pad-mar(0 12px, 0 10px);
+                    @include pad-mar(0 12px 0, 0 0 0 10px);
                     background: none;
         }
     }
@@ -60,7 +88,7 @@
             -webkit-justify-content: flex-end;
             -ms-flex-pack: end;
             justify-content: flex-end;
-            @include pad-mar(10px, 20px);
+            @include pad-mar(10px 0, 20px 0);
         }
 }
 
@@ -92,7 +120,7 @@
             -webkit-align-items: center;
             -ms-flex-align: center;
             align-items: center;
-            @include pad-mar(90px 0 0, 30px auto 0);
+            @include pad-mar(90px 0 0 15px, 30px auto 0);
             max-width: 1024px;
     }
 }
@@ -105,7 +133,9 @@
     @media #{$brk-wide} {
         font-size: 1.2em;
         max-width: 50%;
-        padding: 0;
+        margin:  auto;
+        margin-left: 0;
+        padding-left: 0;
         p {
           @include pad-mar(0, 0);  
         }
@@ -113,16 +143,30 @@
 }
 
 .studentName {
+    display: none;
+    margin-top: -10px;
+    text-align: center;
     font-size: 1.5em;
+    a:hover {
+    background: transparent;
+}
+    @media #{$brk-narrow} {
+        display: block;
+        margin-top: 20px;
+}
     @media #{$brk-wide} {
-        width: 100%;
-        padding-left: 30px;
+        float: left;
+        width: auto;
+        @include pad-mar(10px 30px 10px 15px, 20px 20px 20px 0);
+       
         a {
             font-size: 1.8em;
             padding: 10px; 
         }
+        
     }
 }
+
 
 
 .studentPic {
@@ -136,6 +180,7 @@
     }
     @media #{$brk-wide} {
         margin-right: 0;
-        padding: 0;
+        padding: 0 20px;
     }
 }
+

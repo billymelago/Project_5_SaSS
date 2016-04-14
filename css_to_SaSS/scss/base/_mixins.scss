@@ -18,7 +18,7 @@
         }
 		&:active  { 
             color: $active; 
-            outline: #ccc 1px dotted; 
+            outline: #ccc 0px dotted; 
         }
 		&:focus   { 
             color: $focus; 
