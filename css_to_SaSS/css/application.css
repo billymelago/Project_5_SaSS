@@ -353,42 +353,6 @@ td,
 th {
   padding: 0; }
 
-#mainNav, .navItems, #footer, #portfolioWrapper {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-#mainNav, .navItems, #footer, #portfolioWrapper {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-#portfolioWrapper {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-
-#footer {
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
-
-#mainNav, #portfolioWrapper {
-  -webkit-flex-flow: nowrap column;
-  -ms-flex-flow: nowrap column;
-  flex-flow: nowrap column; }
-
-.navItems {
-  -webkit-flex-flow: wrap column;
-  -ms-flex-flow: wrap column;
-  flex-flow: wrap column; }
-
 .mainContact, #portfolioWrapper {
   position: relative;
   height: 100%;
@@ -426,7 +390,7 @@ ol {
   font-weight: 700;
   text-align: center;
   letter-spacing: -1px; }
-  @media (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     #portfolio, #contact, .navItems {
       font-size: 1.4em; } }
 
@@ -455,91 +419,98 @@ body a {
 /************************ HOME PAGE ************************/
 .studentDescript,
 .mainContact {
-  text-align: center;
-  padding: 20px;
-  border-radius: 16px;
+  font-size: 1.1em;
+  font-weight: 700;
   line-height: 1.5;
   letter-spacing: 1px;
-  font-weight: 700;
+  text-align: center;
   -webkit-transition: all 0.6s ease;
   -moz-transition: all 0.6s ease;
   -ms-transition: all 0.6s ease;
   -o-transition: all 0.6s ease;
-  transition: all 0.6s ease; }
+  transition: all 0.6s ease;
+  padding: 20px;
+  border-radius: 8px; }
   .studentDescript:hover,
   .mainContact:hover {
     background-color: #f5f5f5;
     color: #333; }
 
 #mainWrapper {
+  max-width: 480px;
   background-color: #f5f5f5;
-  padding: 15px 25px; }
-  @media (min-width: 1024px) {
+  padding: 15px 25px;
+  margin: auto; }
+  @media only screen and (min-width: 768px) {
     #mainWrapper {
-      max-width: 1024px;
-      margin: auto; } }
+      max-width: 768px; } }
+  @media only screen and (min-width: 1024px) {
+    #mainWrapper {
+      max-width: 1024px; } }
 
 #portfolio {
   padding: 20px 0 20px; }
-  @media (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     #portfolio {
       font-size: 1.4em; } }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   #contact {
     font-size: 1.4em; } }
 
 .mainContact {
   padding: 65px 20px; }
-  @media (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     .mainContact {
+      display: -webkit-box;
       display: -webkit-flex;
       display: -moz-flex;
-      display: -ms-flex;
-      display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-flex-flow: nowrap column;
+      -moz-flex-flow: nowrap column;
       -ms-flex-flow: nowrap column;
       flex-flow: nowrap column;
       -webkit-box-pack: center;
-      -webkit-justify-content: center;
       -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
       justify-content: center;
-      line-height: 2;
-      max-width: 1280px;
       padding: 0 50px;
       margin: auto;
+      line-height: 2;
+      max-width: "1024px"-1;
       height: 100vh;
-      border-radius: 0; }
+      border-radius: 0px; }
       .mainContact p {
         font-size: 1.2em; } }
-  @media (min-width: 1024px) {
+  @media only screen and (min-width: 1024px) {
     .mainContact {
       -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
       justify-content: space-between;
-      max-width: 1024px;
+      max-width: "1024px";
       padding: 60px 30px;
       margin: auto; }
       .mainContact p {
-        font-size: 1.5em; } }
+        font-size: 1.4em; } }
 
 .contactLinks {
   border-radius: 16px; }
   .contactLinks li {
     margin: 15px; }
-  @media (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     .contactLinks {
       font-size: 1.4em;
-      border-radius: 0; } }
-  @media (min-width: 1024px) {
+      border-radius: 0px; } }
+  @media only screen and (min-width: 1024px) {
     .contactLinks {
-      font-size: 1.5em;
+      font-size: 1.4em;
       font-weight: 700;
-      background-color: white;
-      border-radius: 10px;
+      background-color: #f5f5f5;
+      border-radius: 8px;
       margin-bottom: 20px; } }
 
 /*!
@@ -721,43 +692,77 @@ body a {
   height: 44px; }
 
 #mainHeader {
-  margin: 0 15px 50px; }
-
-#mainNav {
-  display: none; }
+  max-width: 1024px;
+  margin: auto; }
 
 .slicknav_menu {
   display: block;
   margin-bottom: 15px; }
   .slicknav_menu ul {
     margin: auto; }
-  @media (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     .slicknav_menu {
       display: none; } }
 
-@media (min-width: 768px) {
-  #mainNav {
-    display: block; } }
-@media (min-width: 1024px) {
-  #mainNav {
-    position: fixed;
-    max-width: 1024px;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    padding-left: 0;
-    -webkit-flex-flow: wrap row;
-    -ms-flex-flow: wrap row;
-    flex-flow: wrap row;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    background-color: whitesmoke;
-    z-index: 999; } }
+#mainNav {
+  -webkit-box-shadow: 0 15px 10px -15px #669999 1px 2px #CCC;
+  -moz-box-shadow: 0 15px 10px -15px #669999 1px 2px #CCC;
+  box-shadow: 0 15px 10px -15px #669999 1px 2px #CCC;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -moz-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  display: none; }
+  @media only screen and (min-width: 768px) {
+    #mainNav {
+      display: block; } }
+  @media only screen and (min-width: 1024px) {
+    #mainNav {
+      position: fixed;
+      max-width: 1024px;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      padding-left: 0;
+      padding-right: 15px;
+      -webkit-flex-flow: row wrap;
+      -moz-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      justify-content: space-between;
+      background-color: #f5f5f5;
+      z-index: 999; } }
 
 .navItems {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column wrap;
+  -moz-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
   margin: 0 auto 40px; }
   .navItems li {
     width: 100%;
@@ -767,15 +772,17 @@ body a {
     .navItems li a {
       color: #e0ebeb;
       font-weight: 300; }
-  @media (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     .navItems {
       font-size: 1.4em;
-      -webkit-flex-flow: nowrap row;
-      -ms-flex-flow: nowrap row;
-      flex-flow: nowrap row;
+      -webkit-flex-flow: row nowrap;
+      -moz-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
       -webkit-box-pack: center;
-      -webkit-justify-content: center;
       -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
       justify-content: center;
       margin: 0; }
       .navItems li {
@@ -800,107 +807,139 @@ body a {
             outline: #ccc 0px dotted; }
           .navItems li a:focus {
             color: #333; } }
-  @media (min-width: 1024px) {
+  @media only screen and (min-width: 1024px) {
     .navItems {
       -webkit-box-pack: end;
-      -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
+      -webkit-justify-content: flex-end;
+      -moz-justify-content: flex-end;
       justify-content: flex-end;
-      padding: 10px 0;
+      padding: 30px 0;
       margin: 20px 0; } }
 
-@media (min-width: 768px) {
-  .studentSection {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: nowrap row-reverse;
-    -ms-flex-flow: nowrap row-reverse;
-    flex-flow: nowrap row-reverse;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    padding: 0; } }
-@media (min-width: 1024px) {
-  .studentSection {
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    -webkit-flex-flow: nowrap row-reverse;
-    -ms-flex-flow: nowrap row-reverse;
-    flex-flow: nowrap row-reverse;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 90px 0 0 15px;
-    margin: 30px auto 0;
-    max-width: 1024px; } }
+.studentSection {
+  max-width: 550px;
+  padding: 0 25px;
+  margin: auto; }
+  @media only screen and (min-width: 768px) {
+    .studentSection {
+      max-width: 768px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-flow: row-reverse nowrap;
+      -moz-flex-flow: row-reverse nowrap;
+      -ms-flex-flow: row-reverse nowrap;
+      flex-flow: row-reverse nowrap;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      -webkit-justify-content: flex-end;
+      -moz-justify-content: flex-end;
+      justify-content: flex-end;
+      padding: 40px 0 10px; } }
+  @media only screen and (min-width: 1024px) {
+    .studentSection {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      align-items: center;
+      padding: 90px 0 0 15px;
+      margin: 30px auto 0;
+      max-width: 1024px; } }
 
-@media (min-width: 768px) {
-  .studentDescript {
-    font-size: 1.3em;
-    text-align: left;
-    padding: 0 0 0 15px; } }
-@media (min-width: 1024px) {
-  .studentDescript {
-    font-size: 1.2em;
-    max-width: 50%;
-    margin: auto;
-    margin-left: 0;
-    padding-left: 0; }
-    .studentDescript p {
-      padding: 0;
-      margin: 0; } }
+.studentDescript {
+  max-width: 367px;
+  padding: 2px;
+  margin: auto;
+  font-size: 1em;
+  text-align: justify; }
+  @media only screen and (min-width: 768px) {
+    .studentDescript {
+      font-size: 1.2em;
+      text-align: left;
+      padding: 0 0 0 15px; } }
+  @media only screen and (min-width: 1024px) {
+    .studentDescript {
+      font-size: 1.4em;
+      max-width: 70%;
+      margin: auto;
+      margin-left: 0;
+      padding-left: 0; }
+      .studentDescript p {
+        padding: 0;
+        margin: 0; } }
 
 .studentName {
   display: none;
   margin-top: -10px;
-  text-align: center;
-  font-size: 1.5em; }
+  font-size: 1.4em;
+  text-align: center; }
   .studentName a:hover {
     background: transparent; }
-  @media (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     .studentName {
+      font-size: 1.6em;
+      text-align: center;
       display: block;
       margin-top: 20px; } }
-  @media (min-width: 1024px) {
+  @media only screen and (min-width: 1024px) {
     .studentName {
       float: left;
+      display: inline-flex;
       width: auto;
-      padding: 10px 30px 10px 15px;
+      padding: 0px 30px 0px 15px;
       margin: 20px 20px 20px 0; }
       .studentName a {
         font-size: 1.8em;
-        padding: 10px; } }
+        padding: 15px 0; } }
 
 .studentPic {
   display: block;
   padding: 0;
   margin: auto;
-  border: solid 2px #ccc; }
-  @media (min-width: 768px) {
+  border: solid 2px #cfcfcf; }
+  @media only screen and (min-width: 768px) {
     .studentPic {
       min-width: 380px;
       padding: 12px;
       border: none; } }
-  @media (min-width: 1024px) {
+  @media only screen and (min-width: 1024px) {
     .studentPic {
-      margin-right: 0;
-      padding: 0 20px; } }
+      max-width: 30%;
+      padding: 20px;
+      margin: auto auto 0; } }
 
 #footer {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   margin: 0;
-  border-top: solid thin darkgrey; }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  border-top: solid thin #666666; }
   #footer h1 {
     font-size: smaller;
     font-weight: 700;
@@ -909,31 +948,32 @@ body a {
     font-size: 0.72em;
     font-weight: 700;
     padding: 6px 6px; }
-  @media (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     #footer {
-      font-size: 1.3em; } }
+      font-size: 1.4em; } }
 
 .footerNavMobile a {
   font-size: 0.72em;
   font-weight: 700;
-  margin: 0;
-  padding: 6px; }
-@media (min-width: 768px) {
+  padding: 6px;
+  margin: 0; }
+@media only screen and (min-width: 768px) {
   .footerNavMobile {
     display: none; } }
 
 .footerNavTablet {
   display: none; }
-  @media (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     .footerNavTablet {
       display: block;
       text-transform: uppercase; } }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .footerNav,
   .footerNav a {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
+    display: -moz-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
     margin: 0 15px; } }
@@ -952,22 +992,23 @@ body a {
 
 .mainItems a:hover {
   text-decoration: none;
-  color: whitesmoke; }
+  color: #f5f5f5; }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .mainItems {
+    display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
-    display: -ms-flex;
-    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: wrap row;
-    -ms-flex-flow: wrap row;
-    flex-flow: wrap row;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
     -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
     justify-content: space-between; } }
 
 .item {
@@ -982,12 +1023,12 @@ body a {
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease; }
-  @media (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     .item {
       width: 50%;
       font-size: 1em;
       font-weight: lighter; } }
-  @media (min-width: 1024px) {
+  @media only screen and (min-width: 1024px) {
     .item {
       width: 30%;
       padding: 30px 0; } }
@@ -1029,53 +1070,67 @@ body a {
 /************************ PORTFOLIO PAGE ************************/
 #portfolioWrapper {
   padding: 0 15px 90px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -moz-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
   text-align: center;
-  background: darkgrey; }
+  background-color: #8f8f8f; }
   #portfolioWrapper h2 {
-    background: white;
-    color: darkslategrey;
+    background-color: #f5f5f5;
+    color: #669999;
     padding: 15px;
     margin: 10px 0 0;
     font-weight: bold;
     border-radius: 8px; }
-  @media (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     #portfolioWrapper {
       padding: 0 0 90px;
-      min-width: 768px; }
+      min-width: "768px"; }
       #portfolioWrapper h2 {
         width: 100%;
         margin: 0 0 10px; } }
-  @media (min-width: 1024px) {
+  @media only screen and (min-width: 1024px) {
     #portfolioWrapper {
-      max-width: 1290px;
+      max-width: 1024px;
       padding: 110px 0;
-      background-color: whitesmoke; }
+      background-color: #f5f5f5; }
       #portfolioWrapper h2 {
         width: 100%;
-        margin: 0; } }
+        padding: 10px;
+        margin: 20px 0 0; } }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .portfolioItems {
+    display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
-    display: -ms-flex;
-    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: wrap row;
-    -ms-flex-flow: wrap row;
-    flex-flow: wrap row;
-    padding: 0;
-    margin: auto;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
     padding: 0;
     margin: auto; } }
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .portfolioItems {
     padding: 20px;
     margin: auto;
-    -webkit-flex-flow: wrap row;
-    -ms-flex-flow: wrap row;
-    flex-flow: wrap row;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
     padding: 0;
     margin: auto;
     font-size: 1.1em;
@@ -1086,44 +1141,45 @@ body a {
     text-align: left; } }
 
 .portfolioChallenge {
-  background: white;
-  color: darkslategrey;
+  background: #f5f5f5;
+  color: #669999;
   padding: 15px;
   margin: 10px 0 0;
   font-weight: bold;
   border-radius: 8px; }
-  @media (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     .portfolioChallenge {
       -webkit-box-flex: 1;
-      -webkit-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
+      -webkit-flex-grow: 1;
+      -moz-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
       padding: 5px;
       margin: 5px; } }
 
 .portfolioItem {
   border-radius: 8px; }
   .portfolioItem p {
-    background: white;
-    color: darkslategrey;
+    background: #f5f5f5;
+    color: #669999;
     padding: 15px;
     margin: 10px 0 0;
     font-weight: bold;
     border-radius: 8px; }
-  @media (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     .portfolioItem {
       margin: 5px; } }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .challengeContent {
+    display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
-    display: -ms-flex;
-    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: wrap row;
-    -ms-flex-flow: wrap row;
-    flex-flow: wrap row; } }
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap; } }
 
 /*# sourceMappingURL=application.css.map */

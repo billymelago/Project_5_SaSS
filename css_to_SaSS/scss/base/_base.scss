@@ -33,13 +33,10 @@ ol {
 
 .studentDescript,
 .mainContact {
-    text-align: center;
-    padding: 20px;
-    border-radius: $br * 2;
-    line-height: 1.5;
-    letter-spacing: 1px;
-    font-weight: 700;
+    @include text($size: $one-four - .3em, $weight: 700, $l-height: 1.5, $l-space: 1px, $t-align: center);
     @include transition(all .6s ease);
+    padding: 20px;
+    border-radius: $br;
     &:hover {
         background-color: $white-smoke;
         color: $mine-shaft;
@@ -48,64 +45,55 @@ ol {
 
 
 #mainWrapper {
+    max-width: 480px;
     background-color: $white-smoke;
-    padding: 15px 25px;
-    @media #{$brk-wide} {
-        max-width: 1024px;
-        margin: auto;   
+    @include pad-mar(15px 25px, auto);
+    @include media($brk-narrow) {
+    max-width: #{$brk-narrow};
+    }
+    @include media($brk-wide) {
+        max-width: #{$brk-wide};
+          
     }
 }
 
 #portfolio {
     @extend %text-format;
     padding: 20px 0 20px;
-    @media #{$brk-narrow} {
-            font-size: 1.4em;
+    @include media($brk-narrow) {
+            font-size: $one-four;
     }
 }
 
 #contact {
     @extend %text-format;
-    @media #{$brk-narrow} {
-            font-size: 1.4em;
+    @include media($brk-narrow) {
+            font-size: $one-four;
     }
 }
 
 .mainContact {
     @extend %position;
     padding: 65px 20px;
-    @media #{$brk-narrow} {
-            display: -webkit-flex;
-            display: -moz-flex;
-            display: -ms-flex;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-flex-flow: nowrap column;
-            -ms-flex-flow: nowrap column;
-            flex-flow: nowrap column;
-            -webkit-box-pack: center;
-            -webkit-justify-content: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            line-height: 2;
-            max-width: 1280px;
+    @include media($brk-narrow) {
+            @include flexbox;
+            @include flex-flow (nowrap column);
+            @include justify-content (center);
             @include pad-mar(0 50px, auto);
+            line-height: 2;
+            max-width: $brk-wide - 1;
             height: 100vh;
-            border-radius: 0;
+            border-radius: $br - $br;
                 p {
-                    font-size: 1.2em;
+                    font-size: $one-four - .2em;
             }  
     }
-        @media #{$brk-wide} {
-            -webkit-box-pack: justify;
-            -webkit-justify-content: space-between;
-            -ms-flex-pack: justify;
-            justify-content: space-between;
-            max-width: 1024px;
+        @include media($brk-wide) {
+            @include justify-content(space-between);
+            max-width: $brk-wide;
             @include pad-mar(60px 30px, auto);
             p {
-                font-size: 1.5em;
+                font-size: $one-four;
             }
     }  
 }
@@ -115,14 +103,14 @@ ol {
         li {
             margin: 15px;
     }
-    @media #{$brk-narrow} {
-        font-size: 1.4em;
-        border-radius: 0;        
+    @include media($brk-narrow) {
+        font-size: $one-four;
+        border-radius: $br - $br;        
     }
-    @media #{$brk-wide} {
-            @include text(1.5em, 700);
-            background-color: white;
-            border-radius: 10px;
+    @include media($brk-wide) {
+            @include text($one-four, 700);
+            background-color: $white-smoke;
+            border-radius: $br;
             margin-bottom: 20px;
     }
 }

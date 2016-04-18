@@ -4,8 +4,8 @@
 //Font
 $stack-verdana   : Verdana,Geneva,sans-serif;
 $stack-rale      : 'Raleway', $stack-verdana;
-$stack-mont    : 'Montserrat', $stack-verdana;
-
+$stack-mont      : 'Montserrat', $stack-verdana;
+$one-four        : 1.4em;
 
 //Color
 $white-smoke     : #f5f5f5; //backgrounds
@@ -23,8 +23,8 @@ $rouge           : #993366; //hover 13
 $br              : 8px;
 
 //Media Queries
-$brk-narrow      : '(min-width: 768px)';
-$brk-wide        : '(min-width: 1024px)';
+$brk-narrow      : '768px';
+$brk-wide        : '1024px';
 
 
 
