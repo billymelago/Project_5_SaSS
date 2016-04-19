@@ -44,7 +44,7 @@
     text-align: center;
     letter-spacing: -1px;
     @include media(768px) {
-        font-size: 1.4em; 
+        font-size: $one-four; 
     }
 }
 

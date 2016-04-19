@@ -479,7 +479,7 @@ body a {
       padding: 0 50px;
       margin: auto;
       line-height: 2;
-      max-width: "1024px"-1;
+      max-width: 1024px;
       height: 100vh;
       border-radius: 0px; }
       .mainContact p {
@@ -491,7 +491,7 @@ body a {
       -webkit-justify-content: space-between;
       -moz-justify-content: space-between;
       justify-content: space-between;
-      max-width: "1024px";
+      max-width: 1024px;
       padding: 60px 30px;
       margin: auto; }
       .mainContact p {
@@ -529,9 +529,6 @@ body a {
 
 .slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
   margin-top: 0.188em; }
-
-.slicknav_menu {
-  *zoom: 1; }
 
 .slicknav_menu .slicknav_menutxt {
   display: block;
@@ -705,9 +702,9 @@ body a {
       display: none; } }
 
 #mainNav {
-  -webkit-box-shadow: 0 15px 10px -15px #669999 1px 2px #CCC;
-  -moz-box-shadow: 0 15px 10px -15px #669999 1px 2px #CCC;
-  box-shadow: 0 15px 10px -15px #669999 1px 2px #CCC;
+  -webkit-box-shadow: 0px 2px 0px #ccc;
+  -moz-box-shadow: 0px 2px 0px #ccc;
+  box-shadow: 0px 2px 0px #ccc;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -1096,7 +1093,7 @@ body a {
   @media only screen and (min-width: 768px) {
     #portfolioWrapper {
       padding: 0 0 90px;
-      min-width: "768px"; }
+      min-width: 768px; }
       #portfolioWrapper h2 {
         width: 100%;
         margin: 0 0 10px; } }

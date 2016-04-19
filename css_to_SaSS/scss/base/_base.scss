@@ -81,7 +81,7 @@ ol {
             @include justify-content (center);
             @include pad-mar(0 50px, auto);
             line-height: 2;
-            max-width: $brk-wide - 1;
+        max-width: #{$brk-wide};
             height: 100vh;
             border-radius: $br - $br;
                 p {
@@ -90,7 +90,7 @@ ol {
     }
         @include media($brk-wide) {
             @include justify-content(space-between);
-            max-width: $brk-wide;
+            max-width: #{$brk-wide};
             @include pad-mar(60px 30px, auto);
             p {
                 font-size: $one-four;

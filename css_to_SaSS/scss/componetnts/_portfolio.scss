@@ -19,7 +19,7 @@
     }
     @include media($brk-narrow) {
         padding: 0 0 90px;
-        min-width: $brk-narrow;
+        min-width: #{$brk-narrow};
         h2 {
             width: 100%;
             margin: 0 0 10px;
