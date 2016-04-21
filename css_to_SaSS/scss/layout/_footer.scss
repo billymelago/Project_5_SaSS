@@ -16,7 +16,7 @@
         padding: 10px;
     }
     a {
-        @include text(.72em, 700);
+        @include text($font-size + 10, 700);
         padding: 6px 6px;
     }
     @include media($brk-narrow) {
@@ -26,7 +26,7 @@
 
 .footerNavMobile {
      a {
-        @include text(.72em, 700);
+        @include text($font-size + 10, 700);
         @include pad-mar(6px, 0);
     }
     @include media($brk-narrow) {

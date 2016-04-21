@@ -25,7 +25,7 @@
 //Headings Font h1 h2 h3
 %heading {
     font-family: $stack-mont;
-    @include text(24px, 700, $mine-shaft);
+    @include text($font-size * 1.5, 700, $mine-shaft);
 }
 
 //Lists Ordered and Unordered
@@ -40,7 +40,7 @@
 //Text in #portfolio #contact .navItems 
 %text-format {
     text-transform: uppercase;
-    @include text(1em, 700);
+    @include text($font-size * 1.5, 700);
     text-align: center;
     letter-spacing: -1px;
     @include media(768px) {

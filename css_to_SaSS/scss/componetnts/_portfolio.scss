@@ -30,6 +30,7 @@
         padding: 110px 0;
         background-color: $white-smoke;
         h2 {
+            font-size: $font-size * 2.5;
             width: 100%;
             @include pad-mar(10px, 20px 0 0);
         }
@@ -40,13 +41,14 @@
     @include media($brk-narrow) {
         @include flexbox;
         @include flex-flow(row wrap);
+        @include text($font-size * 1.5, inherit, inherit, 1.8, 1.3px, cemter);
         @include pad-mar(0, auto);
     }
     @include media($brk-wide) {
         @include pad-mar(20px, auto);
         @include flex-flow(row wrap);
         @include pad-mar(0, auto);
-        @include text(1.10em, inherit, inherit, 1.8, 1.3px, left);
+        @include text($font-size * 1.8, inherit, inherit, 1.8, 1.3px, left);
     }
 }
 

@@ -11,7 +11,7 @@
 .item {
     @include media($brk-narrow) {
         width: 50%;
-        @include text(1em, lighter);
+        @include text($font-size * 1.6, lighter);
 }
         text-align: center;
         line-height: 1.4;
