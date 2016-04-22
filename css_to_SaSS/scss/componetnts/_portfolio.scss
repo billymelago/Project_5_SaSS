@@ -41,7 +41,7 @@
     @include media($brk-narrow) {
         @include flexbox;
         @include flex-flow(row wrap);
-        @include text($font-size * 1.5, inherit, inherit, 1.8, 1.3px, cemter);
+        @include text($font-size * 1.5, inherit, inherit, 1.8, 1.3px, center);
         @include pad-mar(0, auto);
     }
     @include media($brk-wide) {
